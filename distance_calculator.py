@@ -2,6 +2,8 @@ import cv2
 import numpy as np
 import math as m
 
+distance_threshold=0.07643
+
 frame=cv2.VideoCapture(10)
 
 while True:
@@ -38,7 +40,6 @@ while True:
     
 
             cv2.putText(img,f'{text}',((cx-50),(cy+10)),cv2.FONT_HERSHEY_SIMPLEX,1,(255,0,0),3)
-                # cv2.line(img,(cx,cy),(c2x,c2y),(0,0,255),4)
     
 
     
@@ -50,17 +51,16 @@ while True:
         tx=(x1+x2)//2
         ty=(y1+y2)//2
         cv2.line(img,(x1,y1),(x2,y2),(255,0,0),2)
-        cv2.putText(img,f'{distance*(0.07643):.2f} cm',(tx,ty),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),4)
+        cv2.putText(img,f'{distance*(distance_threshold):.2f} cm',(tx,ty),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),4)
 
         
 
-    # cv2.imshow("hsv",hsv)
+    cv2.imshow("hsv",hsv)
 
-    # cv2.imshow("mask",mask)
+    cv2.imshow("mask",mask)
 
 
-    # cv2.imshow("result",result)
-    # cv2.rectangle(img,(515,247),(603,339),(0,0,0),2)
+    cv2.imshow("result",result)
     cv2.imshow("final output",img)
 
 
