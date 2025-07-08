@@ -2,7 +2,8 @@ import cv2
 import numpy as np
 import math as m
 
-distance_threshold=0.07643
+distance_threshold=0.06912
+
 
 frame=cv2.VideoCapture(10)
 
