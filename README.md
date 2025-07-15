@@ -155,5 +155,5 @@ Feel free to use, modify, and distribute.
 
 Have suggestions, feedback, or collaboration ideas?
 
-**Abhijeet Singh**  
-📧 abhijeet8800434205@gmail.com
+**Rabeel Ashraf**  
+📧 mrperfect6ft@gmail.com
